@@ -1,0 +1,16 @@
+<h2>Gêneros</h2>
+<%= link_to 'Cadastrar novo gênero', new_genre_path %>
+
+<ul>
+  <% @genres.each do |genre| %>
+    <li>
+      <%= genre.name %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Diretores</h2>
+<%= link_to 'Cadastrar novo diretor', new_director_path %>
+
+<h2>Filmes</h2>
+<%= link_to 'Cadastrar novo filme', new_movie_path %>
