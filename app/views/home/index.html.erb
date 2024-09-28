@@ -22,3 +22,11 @@
 
 <h2>Filmes</h2>
 <%= link_to 'Cadastrar novo filme', new_movie_path %>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+      <%= movie.title %> (<%= movie.release_year %>)
+    </li>
+  <% end %>
+</ul>
