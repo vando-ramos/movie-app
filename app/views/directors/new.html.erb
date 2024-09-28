@@ -1,0 +1,23 @@
+<h2>Cadastrar Novo Diretor</h2>
+
+<%= form_with model: @director do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </div>
+  <div>
+    <%= f.label :date_of_birth %>
+    <%= f.date_field :date_of_birth %>
+  </div>
+  <div>
+    <%= f.label :genre_id, 'Gênero Favorito' %>
+    <%= f.collection_select :genre_id, Genre.all, :id, :name %>
+  </div>
+  <div>
+    <%= f.submit 'Enviar' %>
+  </div>
+<% end %>
