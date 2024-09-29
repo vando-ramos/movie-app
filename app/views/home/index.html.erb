@@ -1,32 +1,13 @@
-<h2>Gêneros</h2>
-<%= link_to 'Cadastrar novo gênero', new_genre_path %>
-
-<ul>
-  <% @genres.each do |genre| %>
-    <li>
-      <%= genre.name %>
-    </li>
-  <% end %>
-</ul>
-
-<h2>Diretores</h2>
-<%= link_to 'Cadastrar novo diretor', new_director_path %>
-
-<ul>
-  <% @directors.each do |director| %>
-    <li>
-      <%= director.name %>
-    </li>
-  <% end %>
-</ul>
-
 <h2>Filmes</h2>
+
 <%= link_to 'Cadastrar novo filme', new_movie_path %>
 
 <ul>
   <% @movies.each do |movie| %>
     <li>
-      <%= movie.title %> (<%= movie.release_year %>)
+      <%= link_to movie_path(movie) do %>
+        <%= movie.title %> (<%= movie.release_year %>)
+      <% end %>      
     </li>
   <% end %>
 </ul>

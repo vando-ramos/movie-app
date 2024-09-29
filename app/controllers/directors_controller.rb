@@ -1,6 +1,10 @@
 class DirectorsController < ApplicationController
   before_action :set_director, only: %i[show edit update destroy]
 
+  def index
+    @directors = Director.all
+  end
+
   def show
 
   end

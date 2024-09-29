@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :set_director, only: %i[show edit update destroy]
+  before_action :set_movie, only: %i[show edit update destroy]
 
   def show
 
@@ -39,6 +39,6 @@ class MoviesController < ApplicationController
   end
 
   def set_movie
-    @director = Director.find(params[:id])
+    @movie = Movie.find(params[:id])
   end
 end

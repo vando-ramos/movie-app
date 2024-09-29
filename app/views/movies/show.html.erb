@@ -1,0 +1,9 @@
+<h2><%= @movie.title %></h2>
+
+<p><strong>Ano de lançamento:</strong> <%= @movie.release_year %></p>
+<p><strong>País de origem:</strong> <%= @movie.country_of_origin %></p>
+<p><strong>Duração:</strong> <%= @movie.duration %> min</p>
+<p><strong>Dirigido por:</strong> <%= @movie.director.name %></p>
+<p><strong>Gênero:</strong> <%= @movie.genre.name %></p>
+<p><strong>Sinopse:</strong></p>
+<p><%= @movie.synopsis %></p>

@@ -1,6 +1,10 @@
 class GenresController < ApplicationController
   before_action :set_genre, only: %i[show edit update destroy]
 
+  def index
+    @genres = Genre.all
+  end
+
   def show
 
   end

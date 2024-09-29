@@ -15,6 +15,11 @@
       <h1>MovieApp</h1>
     <% end %>
 
+    <nav>
+      <%= link_to 'Gêneros', genres_path %> |
+      <%= link_to 'Diretores', directors_path %>
+    </nav>
+
     <%= notice %>
 
     <%= yield %>
