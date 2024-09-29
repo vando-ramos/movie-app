@@ -2,7 +2,7 @@ class GenresController < ApplicationController
   before_action :set_genre, only: %i[show edit update destroy]
 
   def index
-    @genres = Genre.all
+    @genres = Genre.order(:name)
   end
 
   def show
@@ -17,7 +17,7 @@ class GenresController < ApplicationController
     @genre = Genre.new(genre_params)
 
     if @genre.save
-      redirect_to root_path, notice: 'Gênero cadastrado com sucesso!'
+      redirect_to genres_path, notice: 'Gênero cadastrado com sucesso!'
     else
       flash.now.notice = 'Não possível cadastrar novo gênero!'
       render :new, status: :unprocessable_entity

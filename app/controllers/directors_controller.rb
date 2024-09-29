@@ -2,7 +2,7 @@ class DirectorsController < ApplicationController
   before_action :set_director, only: %i[show edit update destroy]
 
   def index
-    @directors = Director.all
+    @directors = Director.order(:name)
   end
 
   def show
@@ -17,7 +17,7 @@ class DirectorsController < ApplicationController
     @director = Director.new(director_params)
 
     if @director.save
-      redirect_to root_path, notice: 'Diretor cadastrado com sucesso!'
+      redirect_to directors_path, notice: 'Diretor cadastrado com sucesso!'
     else
       flash.now.notice = 'Não foi possível cadastrar diretor!'
       render :new, status: :unprocessable_entity

@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
     @movie = Movie.new(movie_params)
 
     if @movie.save
-      redirect_to root_path, notice: 'Filme cadastrado com sucesso!'
+      redirect_to @movie, notice: 'Filme cadastrado com sucesso!'
     else
       flash.now.notice = 'Não foi possível cadastrar filme!'
       render :new, status: :unprocessable_entity
@@ -25,7 +25,12 @@ class MoviesController < ApplicationController
   end
 
   def update
-
+    if @movie.update(movie_params)
+      redirect_to @movie, notice: 'Filme atualizado com sucesso!'
+    else
+      flash.now.notice = 'Não foi possível atualizar filme!'
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy

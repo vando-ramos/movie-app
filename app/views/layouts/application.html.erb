@@ -17,10 +17,11 @@
 
     <nav>
       <%= link_to 'Gêneros', genres_path %> |
-      <%= link_to 'Diretores', directors_path %>
+      <%= link_to 'Diretores', directors_path %> |
+      <%= link_to 'Filmes', root_path %>
     </nav>
 
-    <%= notice %>
+    <div><%= notice %></div>
 
     <%= yield %>
   </body>
