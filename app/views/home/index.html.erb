@@ -7,6 +7,7 @@
     <li>
       <%= link_to movie_path(movie) do %>
         <%= movie.title %> (<%= movie.release_year %>)
+        <div><%= image_tag movie.image, class:'img' %></div>
       <% end %>      
     </li>
   <% end %>

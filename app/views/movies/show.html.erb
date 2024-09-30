@@ -1,5 +1,6 @@
 <h2><%= @movie.title %></h2>
 
+<div><%= image_tag @movie.image, class:'img' %></div>
 <p><strong>Ano de lançamento:</strong> <%= @movie.release_year %></p>
 <p><strong>País de origem:</strong> <%= @movie.country_of_origin %></p>
 <p><strong>Duração:</strong> <%= @movie.duration %> min</p>
