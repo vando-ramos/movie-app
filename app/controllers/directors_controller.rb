@@ -29,7 +29,12 @@ class DirectorsController < ApplicationController
   end
 
   def update
-
+    if @director.update(director_params)
+      redirect_to @director, notice: 'Diretor(a) atualizado com sucesso!'
+    else
+      flash.now.notice = 'Não foi possível atualizar diretor(a)!'
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy

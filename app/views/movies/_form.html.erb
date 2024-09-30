@@ -17,11 +17,11 @@
   </div>
   <div>
     <%= f.label :director_id, 'Dirigido por' %>
-    <%= f.collection_select :director_id, Director.all, :id, :name %>
+    <%= f.collection_select :director_id, Director.order(:name), :id, :name %>
   </div>
   <div>
     <%= f.label :genre_id, 'Gênero' %>
-    <%= f.collection_select :genre_id, Genre.all, :id, :name %>
+    <%= f.collection_select :genre_id, Genre.order(:name), :id, :name %>
   </div>
   <div>
     <%= f.label :synopsis, 'Sinopse' %>
