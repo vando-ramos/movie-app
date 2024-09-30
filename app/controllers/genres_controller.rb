@@ -29,7 +29,12 @@ class GenresController < ApplicationController
   end
 
   def update
-
+    if @genre.update(genre_params)
+      redirect_to @genre, notice: 'Gênero atualizado com sucesso!'
+    else
+      flash.now.notice = 'Não foi possível atualizar gênero!'
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
