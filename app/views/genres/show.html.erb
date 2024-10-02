@@ -16,3 +16,7 @@
     <% end %>
   </ul>
 </div>
+
+<% if @genre.movies.empty? %>
+  <p class='no-register'>Não há filmes desse gênero cadastrados!</p>
+<% end %>

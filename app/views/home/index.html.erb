@@ -14,3 +14,7 @@
     <% end %>
   </ul>
 </div>
+
+<% if @movies.empty? %>
+  <p class='no-register'>Não há filmes cadastrados!</p>
+<% end %>

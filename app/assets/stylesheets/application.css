@@ -49,3 +49,9 @@ ul {
   border-radius: 5px;
   text-align: center;
 }
+
+.no-register {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px;
+}

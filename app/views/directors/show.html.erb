@@ -24,3 +24,7 @@
     <% end %>
   </ul>
 </div>
+
+<% if @director.movies.empty? %>
+  <p class='no-register'>Não há filmes desse(a) diretor(a) cadastrados!</p>
+<% end %>
