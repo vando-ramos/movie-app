@@ -24,7 +24,11 @@
     </nav>
 
     <main class='main'>
-      <div><%= notice %></div>
+      <% if notice.present? %>
+        <div class="<%= notice.include?('sucesso') ? 'success-message' : 'error-message' %>">
+            <%= notice %>
+        </div>
+      <% end %>
 
       <%= yield %>
     </main>
