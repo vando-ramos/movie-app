@@ -1,12 +1,18 @@
-<h2><%= @movie.title %></h2>
+<h1><%= @movie.title %></h1>
 
-<div><%= image_tag @movie.image, class:'img' %></div>
-<p><strong>Ano de lançamento:</strong> <%= @movie.release_year %></p>
-<p><strong>País de origem:</strong> <%= @movie.country_of_origin %></p>
-<p><strong>Duração:</strong> <%= @movie.duration %> min</p>
-<p><strong>Dirigido por:</strong> <%= @movie.director.name %></p>
-<p><strong>Gênero:</strong> <%= @movie.genre.name %></p>
-<p><strong>Sinopse:</strong></p>
-<p><%= @movie.synopsis %></p>
+<div class='movie'>
+  <div class='img'>
+    <%= image_tag @movie.image, class:'img' %>
+  </div>
+  <div class='movie-info'>
+    <p><strong>Ano de lançamento:</strong> <%= @movie.release_year %></p>
+    <p><strong>País de origem:</strong> <%= @movie.country_of_origin %></p>
+    <p><strong>Duração:</strong> <%= @movie.duration %> min</p>
+    <p><strong>Direção:</strong> <%= @movie.director.name %></p>
+    <p><strong>Gênero:</strong> <%= @movie.genre.name %></p>
+    <p><strong>Sinopse:</strong></p>
+    <p class='synopsis'><%= @movie.synopsis %></p>
+  </div>
+</div>
 
-<%= link_to 'Editar', edit_movie_path %>
+<div class='edit'><%= link_to 'Editar', edit_movie_path %></div>

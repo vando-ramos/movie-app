@@ -1,0 +1,42 @@
+h1 {
+  text-align: center;
+}
+
+.movie {
+  display: flex;
+  margin-top: 50px;
+}
+
+.movie-info {
+  margin-left: 20px;
+}
+
+main p {
+  margin-bottom: 5px;
+}
+
+.synopsis {
+  text-align: justify;
+}
+
+.edit {
+  width: 80px;
+  border: 1px solid black;
+  background-color: blueviolet;
+  border-radius: 5px;
+  text-align: center;
+  padding: 3px;
+}
+
+.edit a {
+  color: yellow;
+}
+
+.edit:hover {
+  background-color: yellow;
+  color: blueviolet;
+}
+
+.edit:hover a {
+  color: blueviolet;
+}
