@@ -1,14 +1,16 @@
 <h1>Filmes</h1>
 
-<div class='new'><%= link_to 'Cadastrar novo filme', new_movie_path %></div>
-
-<ul>
-  <% @movies.each do |movie| %>
-    <li>
-      <%= link_to movie_path(movie) do %>
-        <%= movie.title %> (<%= movie.release_year %>)
-        <div><%= image_tag movie.image, class:'img' %></div>
-      <% end %>      
-    </li>
-  <% end %>
-</ul>
+<div class='movie-list'>
+  <div class='new'><%= link_to 'Cadastrar novo filme', new_movie_path %></div>
+  
+  <ul>
+    <% @movies.each do |movie| %>
+      <li>
+        <%= link_to movie_path(movie) do %>
+          <%= movie.title %> (<%= movie.release_year %>)
+          <div><%= image_tag movie.image, class:'img' %></div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

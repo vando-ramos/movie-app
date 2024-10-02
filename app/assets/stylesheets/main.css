@@ -1,7 +1,11 @@
 main {  
   margin: auto;
-  margin-top: 40px;
+  margin-top: 80px;
   width: 70vw;
+}
+
+h1 {
+  text-align: center;
 }
 
 main a {

@@ -1,10 +1,10 @@
-<h2><%= @director.name %></h2>
+<h1><%= @director.name %></h1>
 
 <p><strong>Nacionalidade:</strong> <%= @director.nationality %></p>
 <p><strong>Data de nascimento:</strong> <%= @director.date_of_birth %></p>
 <p><strong>Gênero favorito:</strong> <%= @director.genre.name %></p>
 
-<%= link_to 'Editar', edit_director_path %>
+<div class='edit'><%= link_to 'Editar', edit_director_path %></div>
 
 <h2>Filmes Dirigidos</h2>
 
