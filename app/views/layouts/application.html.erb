@@ -13,9 +13,7 @@
   <body> 
     <nav class='navbar'>
       <%= link_to root_path do %>
-        <h1>
-          MovieApp
-        </h1>
+        <h1>MovieApp</h1>
       <% end %>
 
       <ul class='nav-items'>
@@ -25,8 +23,10 @@
       </ul>      
     </nav>
 
-    <div><%= notice %></div>
+    <main class='main'>
+      <div><%= notice %></div>
 
-    <%= yield %>
+      <%= yield %>
+    </main>
   </body>
 </html>
