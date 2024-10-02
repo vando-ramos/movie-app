@@ -2,15 +2,17 @@
 
 <div class='edit'><%= link_to 'Editar', edit_genre_path %></div>
 
-<h2>Filmes do Gênero</h2>
+<div class='movie-list'>
+  <h2>Filmes do Gênero</h2>
 
-<ul>
-  <% @genre.movies.each do |movie| %>
-    <li>
-    <%= link_to movie_path(movie) do %>
-      <%= movie.title %> (<%= movie.release_year %>)
-      <div><%= image_tag movie.image, class:'img' %></div>
+  <ul>
+    <% @genre.movies.each do |movie| %>
+      <li>
+      <%= link_to movie_path(movie) do %>
+        <%= movie.title %> (<%= movie.release_year %>)
+        <div><%= image_tag movie.image, class:'img' %></div>
+      <% end %>
+      </li>
     <% end %>
-    </li>
-  <% end %>
-</ul>
+  </ul>
+</div>

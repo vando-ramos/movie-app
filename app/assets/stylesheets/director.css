@@ -1,0 +1,13 @@
+.director-list {
+  margin-top: 40px;
+}
+
+.director {
+  display: flex;
+  justify-content: center;
+}
+
+.director-info {
+  display: flex;
+  flex-direction: column;
+}

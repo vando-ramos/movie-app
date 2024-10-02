@@ -1,13 +1,15 @@
 <h1>Gêneros</h1>
 
-<div class='new'><%= link_to 'Cadastrar novo gênero', new_genre_path %></div>
-
-<ul>
-  <% @genres.each do |genre| %>
-    <li>
-      <%= link_to  genre_path(genre) do %>
-        <%= genre.name %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+<div class='genre-list'>
+  <div class='new'><%= link_to 'Cadastrar novo gênero', new_genre_path %></div>
+  
+  <ul>
+    <% @genres.each do |genre| %>
+      <li>
+        <%= link_to  genre_path(genre) do %>
+          <%= genre.name %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

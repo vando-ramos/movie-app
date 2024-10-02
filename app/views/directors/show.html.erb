@@ -1,20 +1,26 @@
 <h1><%= @director.name %></h1>
 
-<p><strong>Nacionalidade:</strong> <%= @director.nationality %></p>
-<p><strong>Data de nascimento:</strong> <%= @director.date_of_birth %></p>
-<p><strong>Gênero favorito:</strong> <%= @director.genre.name %></p>
+<div class='director'>
+  <div class='director-info'>
+    <p><strong>Nacionalidade:</strong> <%= @director.nationality %></p>
+    <p><strong>Data de nascimento:</strong> <%= @director.date_of_birth %></p>
+    <p><strong>Gênero favorito:</strong> <%= @director.genre.name %></p>
+  
+    <div class='edit'><%= link_to 'Editar', edit_director_path %></div>
+  </div>
+</div>
 
-<div class='edit'><%= link_to 'Editar', edit_director_path %></div>
-
-<h2>Filmes Dirigidos</h2>
-
-<ul>
-  <% @director.movies.each do |movie| %>
-    <li>
-    <%= link_to movie_path(movie) do %>
-      <%= movie.title %> (<%= movie.release_year %>)
-      <div><%= image_tag movie.image, class:'img' %></div>
+<div class='movie-list'>
+  <h2>Filmes Dirigidos</h2>
+  
+  <ul>
+    <% @director.movies.each do |movie| %>
+      <li>
+      <%= link_to movie_path(movie) do %>
+        <%= movie.title %> (<%= movie.release_year %>)
+        <div><%= image_tag movie.image, class:'img' %></div>
+      <% end %>
+      </li>
     <% end %>
-    </li>
-  <% end %>
-</ul>
+  </ul>
+</div>

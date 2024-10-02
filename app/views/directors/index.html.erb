@@ -1,14 +1,16 @@
 <h1>Diretores</h1>
 
-<div class='new'><%= link_to 'Cadastrar novo diretor(a)', new_director_path %></div>
+<div class='director-list'>
+  <div class='new'><%= link_to 'Cadastrar novo diretor(a)', new_director_path %></div>
 
-<ul>
-  <% @directors.each do |director| %>
-    <li>
-      <%= link_to director_path(director) do %>
-        <%= director.name %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+  <ul>
+    <% @directors.each do |director| %>
+      <li>
+        <%= link_to director_path(director) do %>
+          <%= director.name %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
