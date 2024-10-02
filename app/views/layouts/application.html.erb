@@ -10,15 +10,19 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= link_to root_path do %>
-      <h1>MovieApp</h1>
-    <% end %>
+  <body> 
+    <nav class='navbar'>
+      <%= link_to root_path do %>
+        <h1>
+          MovieApp
+        </h1>
+      <% end %>
 
-    <nav>
-      <%= link_to 'Gêneros', genres_path %> |
-      <%= link_to 'Diretores', directors_path %> |
-      <%= link_to 'Filmes', root_path %>
+      <ul class='nav-items'>
+        <li><%= link_to 'Gêneros', genres_path %></li>
+        <li><%= link_to 'Diretores', directors_path %></li>
+        <li><%= link_to 'Filmes', root_path %></li>
+      </ul>      
     </nav>
 
     <div><%= notice %></div>
