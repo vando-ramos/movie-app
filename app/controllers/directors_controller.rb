@@ -6,7 +6,7 @@ class DirectorsController < ApplicationController
   end
 
   def show
-
+    @movies = @director.movies.order(:release_year)
   end
 
   def new
