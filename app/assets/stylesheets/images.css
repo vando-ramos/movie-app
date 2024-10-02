@@ -1,0 +1,12 @@
+.img {
+  width: 200px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 30px;  
+}
