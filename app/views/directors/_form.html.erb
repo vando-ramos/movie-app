@@ -1,21 +1,23 @@
-<%= form_with model: @director do |f| %>
-  <div>
-    <%= f.label :name, 'Nome' %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label :nationality, 'Nacionalidade' %>
-    <%= f.text_field :nationality %>
-  </div>
-  <div>
-    <%= f.label :date_of_birth, 'Data de nascimento' %>
-    <%= f.date_field :date_of_birth %>
-  </div>
-  <div>
-    <%= f.label :genre_id, 'Gênero Favorito' %>
-    <%= f.collection_select :genre_id, Genre.order(:name), :id, :name %>
-  </div>
-  <div>
-    <%= f.submit 'Enviar' %>
-  </div>
-<% end %>
+<div class='form-container'>
+  <%= form_with model: @director do |f| %>
+    <div>
+      <%= f.label :name, 'Nome' %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :nationality, 'Nacionalidade' %>
+      <%= f.text_field :nationality %>
+    </div>
+    <div>
+      <%= f.label :date_of_birth, 'Data de nascimento' %>
+      <%= f.date_field :date_of_birth %>
+    </div>
+    <div>
+      <%= f.label :genre_id, 'Gênero Favorito' %>
+      <%= f.collection_select :genre_id, Genre.order(:name), :id, :name %>
+    </div>
+    <div>
+      <%= f.submit 'Enviar' %>
+    </div>
+  <% end %>
+</div>

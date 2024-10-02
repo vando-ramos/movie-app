@@ -1,0 +1,52 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  max-width: 400px;
+  width: 100%;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+select {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.duration-field::placeholder {
+  text-align: right;
+}
+
+.synopsis-field {
+  height: 150px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  background-color: black;
+  color: turquoise;
+  font-size: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: turquoise;
+  color: black;
+}
+  
